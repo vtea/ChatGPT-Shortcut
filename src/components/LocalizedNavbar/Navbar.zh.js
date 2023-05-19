@@ -8,25 +8,31 @@ const zhNavbar = {
   items: [
     {
       to: "https://ai.cn2.ltd",
-      label: "Aiprm",
+      label: "Ai cn2",
       position: "left",
     },
     {
       type: 'dropdown',
-      label: '其他工具',
+      label: 'openai',
       position: 'left',
       items: [
-        
         {
-          label: 'api入口',
-          href: 'https://platform.openai.com/',
+          label: 'Chat',
+          href: 'https://chat.openai.com',
+        },
+        {
+          label: 'platform',
           href: 'https://platform.openai.com',
         },
         {
-          label: '官方Chat',
-          href: 'https://chat.openai.com/',
-          href: 'https://chat.openai.com',
+          label: 'community',
+          href: 'https://community.openai.com/',
         },
+        {
+          label: 'status',
+          href: 'https://status.openai.com/',
+        },
+
       ],
     },
     {
@@ -36,14 +42,14 @@ const zhNavbar = {
     },
     { type: "localeDropdown", position: "right" },
     {
-      href: "https://github.com/rockbenben/ChatGPT-Shortcut",
+      href: "https://github.com/openai",
       position: "right",
       className: "header-github-link",
     },
     {
-      href: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=8iL4Va8YaqNyrbdifhEOD0biZx8l2tWY&authKey=TNyKaORGJ0wwCuiwy6BDBlI1MnHM4JTZVJpf9uP%2BT0%2FH5QgW5yrtoK5zKXVhe8xX&noverify=0&group_code=125800040",
+      href: "https://twitter.com/OpenAI",
       position: "right",
-      className: "header-discord-link",
+      className: "header-twitter-link",
     },
   ],
 };
