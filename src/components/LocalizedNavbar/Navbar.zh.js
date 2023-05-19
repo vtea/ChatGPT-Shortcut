@@ -7,7 +7,7 @@ const zhNavbar = {
   },
   items: [
     {
-      to: "https://aiprm.top",
+      to: "https://ai.cn2.ltd",
       label: "Aiprm",
       position: "left",
     },
@@ -18,10 +18,6 @@ const zhNavbar = {
       items: [
         
         {
-          label: '高级提示词',
-          href: 'https://aiprm.top/t/prm',
-        },
-        {
           label: 'api入口',
           href: 'https://platform.openai.com/',
           href: 'https://platform.openai.com',
@@ -30,10 +26,6 @@ const zhNavbar = {
           label: '官方Chat',
           href: 'https://chat.openai.com/',
           href: 'https://chat.openai.com',
-        },
-        {
-          label: "ChatGPT-Next-Web",
-          href: "https://github.com/Yidadaa/ChatGPT-Next-Web",
         },
       ],
     },
