@@ -45,7 +45,7 @@ const DESCRIPTION = translate({
   message: "让生产力加倍的 ChatGPT 快捷指令",
 });
 const SUBMIT_URL =
-  "https://aiprm.top/t/prm";
+  "https://ai.cn2.ltd/reg.htmlhttps://ai.cn2.ltd/reg.html";
 
 type UserState = {
   scrollTopPosition: number;
@@ -142,7 +142,7 @@ function ShowcaseHeader() {
       <Heading as="h1">ChatGPT Prompt</Heading>
       <p>{DESCRIPTION}</p>
       <Link className="button button--primary" to={SUBMIT_URL}>
-        <Translate id="showcase.header.button">🙏 请添加你的提示词</Translate>
+        <Translate id="showcase.header.button">🙏 请添加你的提示词 🙏</Translate>
       </Link>
     </section>
   );
