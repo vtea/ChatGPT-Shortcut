@@ -45,7 +45,7 @@ const DESCRIPTION = translate({
   message: "让生产力加倍的 ChatGPT 快捷指令",
 });
 const SUBMIT_URL =
-  "https://ai.cn2.ltd/reg.htmlhttps://ai.cn2.ltd/reg.html";
+  "https://ai.cn2.ltd/reg.html";
 
 type UserState = {
   scrollTopPosition: number;
