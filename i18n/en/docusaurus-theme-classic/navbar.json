@@ -1,42 +1,50 @@
 {
   "title": {
-    "message": "ChatGPT SC",
+    "message": "AI Short",
     "description": "The title in the navbar"
   },
   "logo.alt": {
     "message": "ChatGPT Shortcuts",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Find on Product Hunt": {
-    "message": "Find on Product Hunt",
-    "description": "Navbar item with label Find on Product Hunt"
+  "item.label.📘 使用说明": {
+    "message": "📘 User Manual",
+    "description": "Navbar item with label 📘 使用说明"
   },
-  "item.label.ChatGPT Shortcut 原理说明": {
-    "message": "ChatGPT Shortcut 原理说明",
-    "description": "Navbar item with label ChatGPT Shortcut 原理说明"
+  "item.label.🏘️ 社区提示词": {
+    "message": "🏘️ Community Prompts",
+    "description": "Navbar item with label 🏘️ 社区提示词"
   },
-  "item.label.其他工具": {
-    "message": "其他工具",
-    "description": "Navbar item with label 其他工具"
+  "item.label.🛠️ 应用工具": {
+    "message": "🛠️ Tools",
+    "description": "Navbar item with label 🛠️ 应用工具"
   },
-  "item.label.反馈/添加提示词": {
-    "message": "反馈/添加提示词",
-    "description": "Navbar item with label 反馈/添加提示词"
-  },
-  "item.label.Chrome 扩展版": {
-    "message": "Chrome 扩展版",
-    "description": "Navbar item with label Chrome 扩展版"
+  "item.label.反馈": {
+    "message": "Feedback",
+    "description": "Navbar item with label 反馈"
   },
   "item.label.IMGPrompt": {
     "message": "IMGPrompt",
     "description": "Navbar item with label IMGPrompt"
   },
   "item.label.文字处理": {
-    "message": "文字处理",
+    "message": "Word processing tool",
     "description": "Navbar item with label 文字处理"
   },
   "item.label.工具收藏": {
-    "message": "工具收藏",
+    "message": "Tool collection",
     "description": "Navbar item with label 工具收藏"
+  },
+  "item.label.Chrome 扩展": {
+    "message": "Chrome Extension",
+    "description": "Navbar item with label Chrome 扩展"
+  },
+  "item.label.Edge 扩展": {
+    "message": "Edge Extension",
+    "description": "Navbar item with label Edge 扩展"
+  },
+  "item.label.Find on Product Hunt": {
+    "message": "Find on Product Hunt",
+    "description": "Navbar item with label Find on Product Hunt"
   }
 }

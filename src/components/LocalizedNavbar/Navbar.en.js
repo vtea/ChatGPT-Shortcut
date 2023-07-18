@@ -1,6 +1,6 @@
 const enNavbar = {
   hideOnScroll: true,
-  title: "ChatGPT SC",
+  title: "AI Short",
   logo: {
     alt: "ChatGPT Shortcuts",
     src: "img/logo.svg",
@@ -11,6 +11,11 @@ const enNavbar = {
       label: 'Find on Product Hunt',
       target: '_blank',
       position: 'left',
+    },
+    {
+      to: "https://www.aishort.top/en/feedback",
+      label: "Feedback",
+      position: "left",
     },
     { type: "localeDropdown", position: "right" },
     {
