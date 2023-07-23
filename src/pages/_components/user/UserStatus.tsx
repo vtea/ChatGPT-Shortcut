@@ -1,13 +1,24 @@
 import React, { useContext, useState } from "react";
 import Cookies from "js-cookie";
 import Link from "@docusaurus/Link";
-import { Form, Input, Button, message, Modal, Typography, Switch } from "antd";
+import {
+  Form,
+  Input,
+  Button,
+  message,
+  Modal,
+  Typography,
+  Switch,
+  Space,
+} from "antd";
 import LoginComponent from "./login";
 import Translate, { translate } from "@docusaurus/Translate";
 import { submitPrompt } from "@site/src/api";
-import { AuthContext } from "./AuthContext";
+import { AuthContext } from "../AuthContext";
 
-const UserStatus = () => {
+const UserStatus = ({
+  hideLinks = { userCenter: false, myFavorite: false },
+}) => {
   const { userAuth, setUserAuth, refreshUserAuth } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -52,14 +63,18 @@ const UserStatus = () => {
     return <div>Loading...</div>;
   } else if (userAuth) {
     return (
-      <div>
-        <Link to='/user' style={{ marginRight: "10px" }}>
-          <Translate id='link.user'>用户界面</Translate>
-        </Link>
-        <Link
-          className='button button--secondary'
-          onClick={handleLogout}
-          style={{ marginRight: "10px" }}>
+      <>
+        {!hideLinks.userCenter && (
+          <Link to='/user' style={{ marginRight: "10px" }}>
+            <Translate id='link.user'>个人中心</Translate>
+          </Link>
+        )}
+        {!hideLinks.myFavorite && (
+          <Link to='/user/favorite' style={{ marginRight: "10px" }}>
+            <Translate id='link.myfavorite'>我的收藏</Translate>
+          </Link>
+        )}
+        <Link className='button button--secondary' onClick={handleLogout} style={{ marginRight: "10px" }}>
           <Translate id='button.logout'>注销</Translate>
         </Link>
         <Link className='button button--primary' onClick={() => setOpen(true)}>
@@ -161,11 +176,11 @@ const UserStatus = () => {
             </Form.Item>
           </Form>
         </Modal>
-      </div>
+      </>
     );
   } else {
     return (
-      <div>
+      <>
         <Link
           className='button button--secondary'
           onClick={() => setOpen(true)}
@@ -180,7 +195,7 @@ const UserStatus = () => {
         <Modal open={open} footer={null} onCancel={() => setOpen(false)}>
           <LoginComponent />
         </Modal>
-      </div>
+      </>
     );
   }
 };
