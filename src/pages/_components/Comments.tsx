@@ -4,7 +4,7 @@ import { List, Avatar, Button, Form, Input, Modal, Pagination } from "antd";
 import { SmileOutlined, GifOutlined } from "@ant-design/icons";
 import { Comment } from "@ant-design/compatible";
 import LoginComponent from "@site/src/pages/_components/user/login";
-import { getComments, postComment, deleteComment, updateComment } from "@site/src/api";
+import { getComments, postComment, updateComment } from "@site/src/api";
 import moment from "moment";
 import debounce from "lodash/debounce";
 import { marked } from "marked";
@@ -19,7 +19,7 @@ const getRandomColor = () => {
   return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
 };
 
-const Comments = ({ pageId, currentUserId }) => {
+const Comments = ({ pageId, currentUserId, type }) => {
   const [comments, setComments] = useState([]);
   const [form] = Form.useForm();
   const [replyForm] = Form.useForm();
@@ -35,7 +35,7 @@ const Comments = ({ pageId, currentUserId }) => {
   const [showGiphySearchBox, setShowGiphySearchBox] = useState(false);
 
   const fetchComments = useCallback(async () => {
-    const response = await getComments(pageId, currentPage, pageSize);
+    const response = await getComments(pageId, currentPage, pageSize, type);
     const nestedComments = nestComments(response.data);
     setComments(nestedComments);
     console.log(response);
@@ -116,7 +116,7 @@ const Comments = ({ pageId, currentUserId }) => {
       handleLoginModalOpen();
       return;
     }
-    await postComment(pageId, values.comment, replyingTo);
+    await postComment(pageId, values.comment, replyingTo, type);
     form.resetFields();
     localStorage.removeItem("savedComment");
     setReplyingTo(null);
@@ -128,7 +128,7 @@ const Comments = ({ pageId, currentUserId }) => {
       handleLoginModalOpen();
       return;
     }
-    await postComment(pageId, values.reply, replyingTo);
+    await postComment(pageId, values.reply, replyingTo, type);
     replyForm.resetFields();
     localStorage.removeItem("savedReply");
     setReplyingTo(null);
@@ -136,18 +136,18 @@ const Comments = ({ pageId, currentUserId }) => {
   };
 
   const handleUpdate = async (values) => {
-    await updateComment(pageId, editingComment, values.comment);
+    await updateComment(pageId, editingComment, values.comment, type);
     editForm.resetFields();
     setEditingComment(null);
     setRefresh(!refresh);
   };
 
-  const handleDelete = async (commentId) => {
-    await deleteComment(pageId, commentId);
+  /* const handleDelete = async (commentId) => {
+    await deleteComment(pageId, commentId, type);
     setReplyingTo(null);
     setRefresh(!refresh);
   };
-
+ */
   const getCommentCount = (comments) => {
     let count = comments.length;
     comments.forEach((comment) => {
@@ -180,18 +180,13 @@ const Comments = ({ pageId, currentUserId }) => {
             <Translate id='comment.reply'>回复</Translate>
           </span>,
           currentUserId === comment.author?.id && (
-            <>
               <span onClick={() => setEditingComment(comment.id)}>
                 <Translate id='edit'>编辑</Translate>
               </span>
-              <span onClick={() => handleDelete(comment.id)}>
-                <Translate id='delete'>删除</Translate>
-              </span>
-            </>
           ),
         ]}
         author={comment.author?.name}
-        avatar={<Avatar style={{ backgroundColor: getRandomColor(), color: "#ffffff" }}>{(comment.author?.name || "").slice(0, 4)}</Avatar>}
+        avatar={<Avatar style={{ backgroundColor: getRandomColor(), color: "#ffffff" }}>{(comment.author?.name || "").slice(0, 3)}</Avatar>}
         content={
           editingComment === comment.id ? (
             <Form form={editForm} layout='inline' onFinish={handleUpdate}>
