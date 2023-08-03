@@ -143,20 +143,19 @@ const Comments = ({ pageId, currentUserId, type }) => {
   };
 
   const handleDelete = async (commentId) => {
-    await deleteComment(pageId, commentId, type);
-    setReplyingTo(null);
-    setRefresh(!refresh);
+    Modal.confirm({
+      title: "Confirm Delete",
+      content: "Are you sure you want to delete this comment?",
+      okText: "Delete",
+      cancelText: "Cancel",
+      onOk: async () => {
+        await deleteComment(pageId, commentId, type);
+        setReplyingTo(null);
+        setRefresh(!refresh);
+      },
+    });
   };
 
-  const getCommentCount = (comments) => {
-    let count = comments.length;
-    comments.forEach((comment) => {
-      if (comment.children) {
-        count += getCommentCount(comment.children);
-      }
-    });
-    return count;
-  };
   // handle emoji
   const handleEmojiSelect = (emoji) => {
     const currentComment = form.getFieldValue("comment");
@@ -370,7 +369,7 @@ const Comments = ({ pageId, currentUserId, type }) => {
       </Form>
       <List
         className='comment-list'
-        header={`${getCommentCount(comments)} ${translate({
+        header={`${totalCommentsCount} ${translate({
           id: "comment.comments",
           message: "评论",
         })}`}
