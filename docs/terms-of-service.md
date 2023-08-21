@@ -64,7 +64,3 @@ These Terms will be governed by and construed in accordance with the laws of the
 ## 8. Miscellaneous
 
 If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect and enforceable. The failure of AiShort to exercise or enforce any right or provision of these Terms does not constitute a waiver of such right or provision. These Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by AiShort without restriction. These Terms constitute the entire agreement between you and AiShort concerning the Services and supersede and replace any prior agreements between you and AiShort with respect to the Services.
-
-## 9. Contact Information
-
-If you have any questions or concerns about these Terms, please contact us at qingwhat@gmail.com

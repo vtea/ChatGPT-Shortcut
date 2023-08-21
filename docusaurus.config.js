@@ -32,43 +32,10 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "zh-Hans",
-    locales: ["zh-Hans", "en", "ja", "ko", "es", "fr", "de", "it", "ru", "pt", "hi", "ar", "bn"],
+    locales: ["zh-Hans", "en"],
     localeConfigs: {
       en: {
         htmlLang: "en-US",
-      },
-      ja: {
-        htmlLang: "ja-JP",
-      },
-      ko: {
-        htmlLang: "ko-KR",
-      },
-      es: {
-        htmlLang: "es-ES",
-      },
-      fr: {
-        htmlLang: "fr-FR",
-      },
-      de: {
-        htmlLang: "de-DE",
-      },
-      it: {
-        htmlLang: "it-IT",
-      },
-      ru: {
-        htmlLang: "ru-RU",
-      },
-      pt: {
-        htmlLang: "pt-PT",
-      },
-      hi: {
-        htmlLang: "hi-IN",
-      },
-      ar: {
-        htmlLang: "ar-SA",
-      },
-      bn: {
-        htmlLang: "bn-BD",
       },
     },
   },
@@ -129,7 +96,7 @@ const config = {
       ],
       navbar: {
         hideOnScroll: true,
-        title: "AI Short",
+        title: "AI Promot",
         logo: {
           alt: "ChatGPT Shortcuts",
           src: "img/logo.svg",
@@ -146,35 +113,9 @@ const config = {
             position: "left",
           },
           {
-            type: "dropdown",
-            label: "🛠️ 应用工具",
+            href: "https://mjprompt.cn2.ltd",
+            label: "🛠️ MJ/SD提示词",
             position: "left",
-            items: [
-              {
-                label: "IMGPrompt",
-                href: "https://prompt.newzone.top/",
-              },
-              {
-                label: "文字处理",
-                href: "https://tools.newzone.top/json-translate",
-              },
-              {
-                label: "工具收藏",
-                href: "https://nav.newzone.top",
-              },
-              {
-                label: "Chrome 扩展",
-                href: "https://chrome.google.com/webstore/detail/chatgpt-shortcut/blcgeoojgdpodnmnhfpohphdhfncblnj",
-              },
-              {
-                label: "Edge 扩展",
-                href: "https://microsoftedge.microsoft.com/addons/detail/chatgpt-shortcut/hnggpalhfjmdhhmgfjpmhlfilnbmjoin",
-              },
-              {
-                label: "Find on Product Hunt",
-                href: "https://www.producthunt.com/posts/chatgpt-shortcut?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatgpt&#0045;shortcut",
-              },
-            ],
           },
           {
             type: "dropdown",
@@ -182,31 +123,23 @@ const config = {
             position: "left",
             items: [
               {
-                label: "📝 提交反馈",
-                to: "/feedback",
-              },
-              {
-                label: "💬 微信交流",
-                href: "https://img.newzone.top/wechat.svg",
+                label: "📝 交流群",
+                href: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=TnXOb974WvDtckyXDqWMkUrk7iguOwkQ&authKey=Wz15XEqMxppX0D99A5d5YZvokfzCF28cSFv7zPx1Ltgm3fV4p1yLI2f9%2B0wBzmDj&noverify=0&group_code=181509991",
               },
               {
                 label: "📧 发送邮件",
-                href: "mailto:learndata@newzone.top",
-              },
-              {
-                label: "📺 加入 Discord",
-                href: "https://discord.gg/PZTQfJ4GjX",
+                href: "mailto:micejia@qq.com",
               },
             ],
           },
           { type: "localeDropdown", position: "right" },
           {
-            href: "https://github.com/rockbenben/ChatGPT-Shortcut",
+            href: "/",
             position: "right",
             className: "header-github-link",
           },
           {
-            href: "https://discord.gg/PZTQfJ4GjX",
+            href: "/",
             position: "right",
             className: "header-discord-link",
           },

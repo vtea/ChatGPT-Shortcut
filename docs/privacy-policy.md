@@ -53,6 +53,4 @@ We do not sell your personal data to external parties.
 
 aishort.top maintains appropriate technical, administrative, and physical safeguards that are designed to prevent unauthorized access, use or disclosure of personal data we collect or store and to ensure a level of security appropriate to the risk of varying likelihood and severity for the rights and freedoms of natural persons that may be involved with our processing operations. We regularly monitor our systems for possible vulnerabilities and attacks. However, it is not possible to guarantee the security of personal data transmitted over the Internet. You use the website and provide us with personal data at your own discretion and risk.
 
-## Contact Information
 
-If you have questions or complaints about this Privacy Policy or our practices, please contact us by email at qingwhat@gmail.com.
